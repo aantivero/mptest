@@ -11,10 +11,10 @@ interface MyAccount extends Account{
 
 @IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-cobrar',
+  templateUrl: 'cobrar.html'
 })
-export class HomePage implements OnInit {
+export class CobrarPage implements OnInit {
   account: Account;
   dataInfo: MyAccount;
 
@@ -52,10 +52,6 @@ export class HomePage implements OnInit {
     if (this.account !== null && this.dataInfo !== null) {
       this.createdCode = this.dataInfo.login;
     }
-  }
-
-  shadowCode() {
-    this.createdCode = null;
   }
 
   scanCode() {

@@ -38,7 +38,8 @@ export class MyApp {
     { title: 'Signup', component: 'SignupPage' },
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Settings', component: 'SettingsPage' },
-    { title: 'Entities', component: 'EntityPage' }
+    { title: 'Entities', component: 'EntityPage' },
+    { title: 'Cobrar', component: 'CobrarPage'}
   ];
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config,
@@ -54,7 +55,7 @@ export class MyApp {
 
   initTranslate() {
     // Set the default language for translation strings, and the current language.
-    this.translate.setDefaultLang('en');
+    this.translate.setDefaultLang('es');
 
     if (this.translate.getBrowserLang() !== undefined) {
       this.translate.use(this.translate.getBrowserLang());

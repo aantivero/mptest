@@ -1,13 +1,17 @@
 {
+  "USERNAME": "Usuario",
   "NAME": "Nombre",
   "PASSWORD": "Contraseña",
   "EMAIL": "Email",
   "LOGIN": "Iniciar sesión",
   "SIGNUP": "Registrarse",
 
-  "TAB1_TITLE": "Items",
+  "TAB1_TITLE": "Inicio",
   "TAB2_TITLE": "Buscar",
   "TAB3_TITLE": "Ajustes",
+  "PAGAR_TITLE": "Pagar",
+  "COBRAR_TITLE": "Cobrar",
+  "VINCULAR_TITLE": "Vincular",
 
   "MAP_TITLE": "Mapa",
 

@@ -1,18 +1,13 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Bienvenido, {{account?.firstName}}!
+      Cobros
     </ion-title>
-    <ion-buttons end>
-      <button ion-button (click)="logout()">
-        Salir
-      </button>
-    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <p>ArPayNow, Servicio de Pago Mobile</p>
+  <p>Generar formulario de cobro</p>
 
   <!--<span class="hipster"></span>-->
   <!--<ion-item>
@@ -30,7 +25,6 @@
     <!--<ion-card-content>
       <p>Valor Creado: {{createdCode}}</p>
     </ion-card-content>-->
-    <button ion-button full icon-left (click)="shadowCode()"><ion-icon name="barcode"></ion-icon>Ocultar</button>
   </ion-card>
 
   <!--<ion-card *ngIf="scannedCode">

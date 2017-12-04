@@ -8,9 +8,12 @@
   "LOGIN": "Sign in",
   "SIGNUP": "Sign up",
 
-  "TAB1_TITLE": "Home",
+  "TAB1_TITLE": "Inicio",
   "TAB2_TITLE": "Entities",
   "TAB3_TITLE": "Settings",
+  "PAGAR_TITLE": "Pagar",
+  "COBRAR_TITLE": "Cobrar",
+  "VINCULAR_TITLE": "Vincular",
 
   "MAP_TITLE": "Map",
 
