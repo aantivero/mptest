@@ -18,6 +18,14 @@ export class CobrarPage implements OnInit {
   account: Account;
   dataInfo: MyAccount;
 
+  cobro: {cliente: string, descripcion: string, monto: number} = {
+    cliente: null,
+    descripcion: null,
+    monto: null
+  }
+
+  displayCobro = false;
+
   qrData = null;
   createdCode = '';
   scannedCode = null;
@@ -50,15 +58,30 @@ export class CobrarPage implements OnInit {
 
   createCode() {
     if (this.account !== null && this.dataInfo !== null) {
-      this.createdCode = this.dataInfo.login;
+      let message = `cobrador: ${this.dataInfo.login}; descripcion: ${this.cobro.descripcion}; monto: ${this.cobro.monto}`;
+      this.createdCode = message;
     }
   }
 
-  scanCode() {
+  ocultarCodigo() {
+    this.createdCode = null;
+  }
+
+  scanClientCode() {
     this.barcodeScanner.scan().then(barcodeData => {
-      this.scannedCode = barcodeData.text;
+      this.cobro.cliente = barcodeData.text;
     }, (err) => {
       console.log('Error: ', err);
     })
+  }
+
+  isDisplayCobro() {
+    if (this.cobro.cliente && this.cobro.monto) {
+      console.log(this.cobro.cliente);
+      console.log(this.cobro.monto);
+      return true;
+    } else {
+      return false;
+    }
   }
 }

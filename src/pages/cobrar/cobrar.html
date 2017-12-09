@@ -14,8 +14,29 @@
     <ion-input type="text" placeholder="Ingresar Datos..." [(ngModel)]="qrData"></ion-input>
   </ion-item>-->
 
-  <button ion-button full icon-left (click)="createCode()"><ion-icon name="barcode"></ion-icon>Mostrar tu Código</button>
-  <!--<button ion-button full icon-right (click)="scanCode()"><ion-icon name="qr-scanner"></ion-icon>Leer Codigo</button>-->
+  <ion-item>
+    <ion-input type="text" placeholder="Nombre de Cliente..." [(ngModel)]="cobro.cliente"></ion-input>
+  </ion-item>
+  <button ion-button full icon-right (click)="scanClientCode()"><ion-icon name="qr-scanner"></ion-icon>Scanear Código del Cliente</button>
+
+  <ion-item>
+    <ion-input type="text" placeholder="Decripcion..." [(ngModel)]="cobro.descripcion"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="number" placeholder="Monto..." [(ngModel)]="cobro.monto"></ion-input>
+  </ion-item>
+
+  <div *ngIf="!createdCode">
+    <p>Ahora puedes:</p>
+    <button ion-button full icon-left (click)="createCode()"><ion-icon name="barcode"></ion-icon>Mostrar código de cobro</button>
+
+    <p>O..</p>
+    <button ion-button full icon-left ><ion-icon name="mail"></ion-icon>Enviar mensaje de cobro</button>
+    <!--<button ion-button full icon-right (click)="scanCode()"><ion-icon name="qr-scanner"></ion-icon>Leer Codigo</button>-->
+  </div>
+  <button *ngIf="createdCode" ion-button full icon-left (click)="ocultarCodigo()" color="dark"><ion-icon name="barcode"></ion-icon>Ocultar código de cobro</button>
+
 
   <ion-card *ngIf="createdCode">
     <ngx-qrcode
