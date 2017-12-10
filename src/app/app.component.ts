@@ -39,7 +39,8 @@ export class MyApp {
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Settings', component: 'SettingsPage' },
     { title: 'Entities', component: 'EntityPage' },
-    { title: 'Cobrar', component: 'CobrarPage'}
+    { title: 'Cobrar', component: 'CobrarPage'},
+    { title: 'Pagar', component: 'PagarPage'}
   ];
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config,
