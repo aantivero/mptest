@@ -1,0 +1,48 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "cuenta"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "cbu",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMinlength": "22",
+            "fieldValidateRulesMaxlength": "22",
+            "fieldValidateRulesPattern": "(^[0-9]*$)"
+        },
+        {
+            "fieldName": "aliasCbu",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171210213733",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "cuenta",
+    "jpaMetamodelFiltering": false,
+    "pagination": "infinite-scroll"
+}
